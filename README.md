@@ -1,63 +1,121 @@
-# Next.js Framework Starter
+# Portfolio
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/next-starter-template)
+私の制作した作品を紹介するポートフォリオサイトです。
 
-<!-- dash-content-start -->
+## Demo
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It's deployed on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
+https://portfolio.tw08iwckpyvz48pfu0sx-262.workers.dev/
 
-This template uses [OpenNext](https://opennext.js.org/) via the [OpenNext Cloudflare adapter](https://opennext.js.org/cloudflare), which works by taking the Next.js build output and transforming it, so that it can run in Cloudflare Workers.
+## Screenshots
 
-<!-- dash-content-end -->
+### Home
 
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
+<img src="src/docs/images/home.png" width="800" alt="Home">
 
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/next-starter-template
-```
+### About
 
-A live public deployment of this template is available at [https://next-starter-template.templates.workers.dev](https://next-starter-template.templates.workers.dev)
+<img src="src/docs/images/about.png" width="800" alt="About">
+
+### Skills
+
+<img src="src/docs/images/skills.png" width="800" alt="Skills">
+
+### Works
+
+<img src="src/docs/images/works.png" width="800" alt="Works">
+
+### Mobile
+
+<img src="src/docs/images/mobile.png" width="250" alt="Mobile">
+
+## Features
+
+- 作品一覧の表示
+- 作品詳細をモーダルで表示
+- レスポンシブ対応
+- ダークモード対応
+- 文字アニメーションなどのインタラクティブなUI
+
+## Key Implementations
+
+### Parallel Routes & Intercepting Routes
+
+作品詳細はNext.jsのParallel RoutesとIntercepting Routesを利用して実装しています。
+
+一覧画面から遷移した場合はモーダルとして表示
+URLへ直接アクセスした場合は通常ページとして表示
+
+これにより、UXとURL共有のしやすさを両立しています。
+
+## Tech Stack
+
+| Category  | Technology   |
+| --------- | ------------ |
+| Framework | Next.js      |
+| Language  | TypeScript   |
+| Styling   | Tailwind CSS |
+| Lint      | ESLint       |
+| Formatter | Prettier     |
+
+### Centralized Configuration
+
+サイト名やメタデータなどの共通情報は`constants`に集約しています。
+
+変更箇所を一元化することで、保守性を向上させています。
+
+### Accessibility
+
+アクセシビリティを意識して実装しています。
+
+- コントラスト比を考慮した配色
+- セマンティックなHTML
+
+### UI / Animation
+
+ユーザー体験を向上させるため、過度にならない範囲でアニメーションを採用しています。
+
+- Heroセクションの文字アニメーション
+- スムーズなページ遷移
 
 ## Getting Started
 
-First, run:
+### Clone the repository
+
+```bash
+git clone https://github.com/iotgsdh/portfolio.git
+cd portfolio
+```
+
+### Install dependencies
 
 ```bash
 npm install
-# or
-yarn install
-# or
-pnpm install
-# or
-bun install
 ```
 
-Then run the development server (using the package manager of your choice):
+### Run the development server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Directory Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```text
+.
+├── app
+│   ├── about
+│   ├── skills
+│   └── works
+├── components
+├── constants
+└── hooks
+```
 
-## Deploying To Production
-
-| Command                           | Action                                       |
-| :-------------------------------- | :------------------------------------------- |
-| `npm run build`                   | Build your production site                   |
-| `npm run preview`                 | Preview your build locally, before deploying |
-| `npm run build && npm run deploy` | Deploy your production site to Cloudflare    |
-| `npm wrangler tail`               | View real-time logs for all Workers          |
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+| Directory    | Description                                                                                                        |
+| ------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `app`        | App Routerのページ、レイアウト、ルーティングを管理します。`about`、`skills`、`works`などのページを配置しています。 |
+| `components` | 再利用可能なUIコンポーネントを配置します。                                                                         |
+| `constants`  | サイト情報や共通で使用する定数を管理します。                                                                       |
+| `hooks`      | カスタムフックを配置します。                                                                                       |
