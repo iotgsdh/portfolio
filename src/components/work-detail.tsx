@@ -21,6 +21,8 @@ export default function WorkDetail({ id }: { id: number }) {
         <div>
           <Link
             href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
             className="underline underline-offset-[0.25em]"
           >
             {project.demo}
@@ -29,6 +31,8 @@ export default function WorkDetail({ id }: { id: number }) {
         <div>
           <Link
             href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
             className="underline underline-offset-[0.25em]"
           >
             {project.github}
