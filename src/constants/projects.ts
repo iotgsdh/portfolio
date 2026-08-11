@@ -8,6 +8,7 @@ export const PROJECTS = [
     alt: "Picture of the Portfolio",
     demo: "https://portfolio.tw08iwckpyvz48pfu0sx-262.workers.dev",
     github: "https://github.com/iotgsdh/portfolio",
+    updatedAt: "2026-08-11",
   },
   {
     id: 2,
@@ -18,5 +19,6 @@ export const PROJECTS = [
     alt: "Picture of the KISSA",
     demo: "https://kissa.tw08iwckpyvz48pfu0sx-262.workers.dev",
     github: "https://github.com/iotgsdh/kissa",
+    updatedAt: "2026-08-11",
   },
 ] as const;
