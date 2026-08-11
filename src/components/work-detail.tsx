@@ -14,6 +14,7 @@ export default function WorkDetail({ id }: { id: number }) {
           alt={project.alt}
           width={project.width}
           height={project.height}
+          preload={true}
           loading="eager"
         />
       </div>

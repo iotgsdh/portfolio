@@ -21,6 +21,8 @@ export default function Works() {
                   alt={project.alt}
                   width={project.width}
                   height={project.height}
+                  sizes="(max-width: 767px) calc(100vw - 16px * 2), (max-width: 1023px) calc(50vw - 16px * 3), (max-width: 1279px) calc(33vw - 16px * 4), calc(25vw - 16px * 5)"
+                  preload={true}
                   loading="eager"
                 />
               </Link>
