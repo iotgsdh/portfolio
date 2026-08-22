@@ -24,10 +24,10 @@ export const PROJECTS = [
   {
     id: 3,
     name: "JobTrack",
-    src: "/no-image.png",
+    src: "/images/jobtrack.png",
     width: 2880,
     height: 1800,
-    alt: "NO IMAGE",
+    alt: "Picture of the JobTrack",
     demo: "https://jobtrack.tw08iwckpyvz48pfu0sx-262.workers.dev",
     github: "https://github.com/iotgsdh/jobtrack",
     updatedAt: "2026-08-22",
