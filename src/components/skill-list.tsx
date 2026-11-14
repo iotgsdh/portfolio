@@ -12,7 +12,7 @@ const skills: [string, string[]][] = [
       "GSAP",
     ],
   ],
-  ["Backend", ["PHP", "Supabase"]],
+  ["Backend", ["Java", "PHP", "Supabase"]],
   ["CMS", ["WordPress", "microCMS"]],
   ["Tools", ["Git", "GitHub"]],
   ["Other", ["Figma"]],
